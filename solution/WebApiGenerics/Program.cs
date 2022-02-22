@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Writers;
-using WebApiDefault.Model;
-using WebApiDefault.Services;
+using WebApiGenerics.Model;
+using WebApiGenerics.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,9 +20,9 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("default"));
 });
 
-builder.Services.AddScoped<IKlantenService, KlantenService>();
+builder.Services.AddScoped<IGenericService<Klant>, KlantenService>();
 builder.Services.AddScoped<IAutosService, AutosService>();
-builder.Services.AddScoped<IMedewerkersService, MedewerkersService>();
+builder.Services.AddScoped<IGenericService<Medewerker>, GenericService<Medewerker>>();
 
 var app = builder.Build();
 
