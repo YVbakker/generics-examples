@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApiDefault.Model;
+namespace WebApiGenerics.Model;
 
 public class Klant
 {

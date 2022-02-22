@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApiDefault.Model
+namespace WebApiGenerics.Model
 {
     public class ApplicationContext : DbContext
     {
