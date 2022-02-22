@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Writers;
 using WebApiDefault.Model;
+using WebApiDefault.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("default"));
 });
 
+builder.Services.AddScoped<IKlantenService, KlantenService>();
 
 var app = builder.Build();
 
