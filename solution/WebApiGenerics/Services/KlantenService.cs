@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using WebApiDefault.Model;
+using WebApiGenerics.Model;
 
-namespace WebApiDefault.Services;
+namespace WebApiGenerics.Services;
 
-public class KlantenService : IKlantenService
+public class KlantenService : IGenericService<Klant>
 {
     private readonly ApplicationContext _context;
     private readonly DbSet<Klant> _klantenRepo;

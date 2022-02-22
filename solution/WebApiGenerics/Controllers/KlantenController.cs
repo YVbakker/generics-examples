@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApiDefault.Services;
+using WebApiGenerics.Model;
+using WebApiGenerics.Services;
 
-namespace WebApiDefault.Controllers;
+namespace WebApiGenerics.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class KlantenController : ControllerBase
 {
-    private readonly IKlantenService _klantenService;
+    private readonly IGenericService<Klant> _klantenService;
 
-    public KlantenController(IKlantenService klantenService)
+    public KlantenController(IGenericService<Klant> klantenService)
     {
         _klantenService = klantenService;
     }
