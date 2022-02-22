@@ -21,6 +21,7 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
 });
 
 builder.Services.AddScoped<IKlantenService, KlantenService>();
+builder.Services.AddScoped<IAutosService, AutosService>();
 
 var app = builder.Build();
 
