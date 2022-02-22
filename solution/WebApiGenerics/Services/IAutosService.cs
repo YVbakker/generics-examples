@@ -1,9 +1,8 @@
-using WebApiDefault.Model;
+using WebApiGenerics.Model;
 
-namespace WebApiDefault.Services;
+namespace WebApiGenerics.Services;
 
-public interface IAutosService
+public interface IAutosService : IGenericService<Auto>
 {
-    Task<IList<Auto>> Get();
     Task<Auto?> Get(int id);
 }

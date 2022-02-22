@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApiDefault.Services;
+using WebApiGenerics.Services;
 
-namespace WebApiDefault.Controllers;
+namespace WebApiGenerics.Controllers;
 
 [ApiController]
 [Route("[controller]")]

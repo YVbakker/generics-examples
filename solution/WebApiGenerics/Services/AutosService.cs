@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using WebApiDefault.Model;
+using WebApiGenerics.Model;
 
-namespace WebApiDefault.Services;
+namespace WebApiGenerics.Services;
 
 public class AutosService : IAutosService
 {
