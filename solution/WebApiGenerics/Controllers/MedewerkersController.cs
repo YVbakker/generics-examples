@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApiDefault.Services;
+using WebApiGenerics.Model;
+using WebApiGenerics.Services;
 
-namespace WebApiDefault.Controllers;
+namespace WebApiGenerics.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class MedewerkersController : ControllerBase
 {
-    private readonly IMedewerkersService _medewerkersService;
+    private readonly IGenericService<Medewerker> _medewerkersService;
 
-    public MedewerkersController(IMedewerkersService medewerkersService)
+    public MedewerkersController(IGenericService<Medewerker> medewerkersService)
     {
         _medewerkersService = medewerkersService;
     }

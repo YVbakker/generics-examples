@@ -1,4 +1,4 @@
-namespace WebApiDefault.Services;
+namespace WebApiGenerics.Services;
 
 public interface IGenericService<T>
 {

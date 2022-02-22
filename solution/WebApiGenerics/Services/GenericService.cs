@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using WebApiDefault.Model;
-using WebApiDefault.Services;
+using WebApiGenerics.Model;
 
 namespace WebApiGenerics.Services;
 
